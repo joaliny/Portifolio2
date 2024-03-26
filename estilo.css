@@ -184,12 +184,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 14px;
+    padding: 20px;
     margin: 20px 15px;
+
     background: 
-     radial-gradient((rgba 0,0,0,0.15) 60%, transparent 0),
-     radial-gradient( (#0c0c0c) 68%,  transparent 0),
-     linear-gradient( to top right, #ffa500 0%, #d12f7a 100%);
+     radial-gradient((rgba 0, 0, 0, 0.15) 60%, transparent 0),
+     radial-gradient(#0c0c0c 68%, transparent 0),
+     linear-gradient(to top right, #ffa500 0%, #d12f7a 100% );
 }
 
 .profile-photo{
@@ -198,9 +199,128 @@ body{
 }
 
 
-.links img{
+.links a img{
     width: 30px;
     height: 30px;
+    margin: 10px;
+    filter: brightness(0.8);
+    border-radius: 30%;
+    transition: all .3s ease;
+}
+.links a img:hover{
+    filter: brightness(0.5);
+    transform: scale(1.15);
+}
+
+#about{
+    height: 100vh;
+    width: 100%;
+    background: var(--color-black);
+    display: flex;
+    color: var(--color-white);
+}
+
+.background-about{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.img-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: 
+      linear-gradient(0turn, transparent 95%, var(--color-black)),
+      linear-gradient(.25turn, transparent 50%, var(--color-black)),
+      linear-gradient(.96turn, transparent 75%, var(--color-black));
+}
+
+.img-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box-about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem;
+}
+
+.section-subtitle h2 p{
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.section-subtitle h2 p:nth-child(2) span{
+    padding: 3px 5px;
+    border-radius: 4px;
+    color: var(--color-black);
+    background: var(--color-white);
+}
+
+.box-about h3{
+    margin: 3rem;
+    font-size: 2rem;
+}
+
+.box-about h3 p{
+    display:inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: var(--color-black);
+    background: var(--color-pink);
+    width:fit-content ;
+}
+.box-about h4 {
+    margin: 1rem 3rem;
+    font-size: 1.5rem;
+}
+
+.box-about h4 p{
+    display: inline;
+    padding: 2px 4px;
+    color: var(--color-blue);
+    font-size: bold ; 
+    font-weight: 1.75rem;
+}
+
+.button-cta {
+    display: flex;
+    max-width: 190px;
+    margin: 4rem 3rem;
+}
+.button-cta button{
+    display: inline-block;
+    width: 100%;
+    max-width: 172px;
+    padding: 10px;
+    margin-bottom: 3rem;
+    font-family: 'poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: .15rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button-cta button:hover{
+    filter: brightness(.8);
+    transition: all .3s ease;
 }
 
 @keyframes written_text{
